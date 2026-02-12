@@ -17,7 +17,7 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-const BASE_URL = "https://lohas-inc-web.vercel.app";
+const BASE_URL = "https://lohas-inc.com";
 
 export async function generateMetadata({
   params,
