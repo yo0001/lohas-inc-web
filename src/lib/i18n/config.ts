@@ -23,10 +23,19 @@ export type Dictionary = {
   };
   hero: {
     heading: string;
+    subheading: string;
     description: string;
     ctaProducts: string;
     ctaAbout: string;
     logoAlt: string;
+  };
+  philosophy: {
+    heading: string;
+    statement: string;
+    pillars: {
+      title: string;
+      description: string;
+    }[];
   };
   products: {
     heading: string;

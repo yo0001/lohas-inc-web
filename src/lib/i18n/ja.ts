@@ -16,12 +16,36 @@ const ja: Dictionary = {
     en: "English",
   },
   hero: {
-    heading: "Health × AI Technology",
+    heading: "好奇心と信頼を羅針盤に、\n医療への貢献を実装する。",
+    subheading:
+      "AGI後の超流動的な世界で、不変の価値を実装する。",
     description:
       "LOHAS Inc. は、医療・健康分野に特化した AI プロダクトを開発するテクノロジー企業です。最先端の AI 技術で、医療情報へのアクセスを民主化し、すべての人の健康な暮らしに貢献します。",
     ctaProducts: "Products",
     ctaAbout: "About Us",
     logoAlt: "LOHAS Inc.",
+  },
+  philosophy: {
+    heading: "Philosophy",
+    statement:
+      "私たちは、格差が固定化するわけでも、単に縮まるわけでもないと考えます。訪れるのは、超流動的で入れ替わりの激しい「格差の動的平衡」。誰もが瞬時に頂点に立ち、瞬時に転落しうる世界。だからこそ、不変の価値が重要になるのです。",
+    pillars: [
+      {
+        title: "格差の動的平衡",
+        description:
+          "誰もが瞬時に頂点に立ち、瞬時に転落しうる超流動的な世界。固定化でも収束でもない、絶え間ない変動の中に均衡がある。",
+      },
+      {
+        title: "好奇心",
+        description:
+          "未知に手を伸ばし続ける原動力。比較や序列ではなく、純粋な探究心こそが新しい価値を生む。",
+      },
+      {
+        title: "信頼",
+        description:
+          "流動する世界で唯一揺るがない基盤。誰かより上か下かではなく、共に歩む関係性を築く。",
+      },
+    ],
   },
   products: {
     heading: "Products",
@@ -78,7 +102,7 @@ const ja: Dictionary = {
     ],
     mission: {
       heading: "Mission",
-      text: "\u201cLifestyles of Health and Sustainability\u201d \u2014 私たちは、AI 技術を通じて医療情報のアクセシビリティを向上させ、言語や専門知識の壁を超えて、すべての人が健康に関する正確な情報を得られる世界を目指しています。",
+      text: "誰かより上だとか下だとか、そんな比較はもううんざり。本質ではありません。LOHAS Inc. は、好奇心と信頼を羅針盤として、今日も医療への貢献を実装します。AI 技術を通じて医療情報のアクセシビリティを向上させ、言語や専門知識の壁を超えて、すべての人が健康に関する正確な情報を得られる世界を目指しています。",
     },
   },
   legal: {

@@ -16,3 +16,31 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans), sans-serif;
 }
+
+/* Dark Hero Section */
+.hero-dark {
+  background: linear-gradient(165deg, #0a0a0a 0%, #1a1a2e 50%, #0f0f1a 100%);
+}
+
+/* Dark Philosophy Section */
+.philosophy-dark {
+  background: linear-gradient(180deg, #0f0f1a 0%, #0a0a0a 100%);
+}
+
+/* Mission card subtle gradient */
+.mission-card {
+  background: linear-gradient(135deg, #fff 0%, #f8fafb 100%);
+}
+
+/* Nav dark mode (on hero) */
+.nav-dark {
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Footer dark */
+.footer-dark {
+  background: #0a0a0a;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}

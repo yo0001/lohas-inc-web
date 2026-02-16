@@ -39,6 +39,8 @@ const colorMap: Record<
   },
 };
 
+const pillarIcons = ["⚡", "🔭", "🤝"];
+
 export default async function Home({
   params,
 }: {
@@ -49,37 +51,46 @@ export default async function Home({
 
   return (
     <div className="min-h-screen">
-      {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div className="max-w-5xl mx-auto px-4 py-24 sm:py-32 text-center space-y-8">
+      {/* Hero — Dark gradient */}
+      <section className="relative overflow-hidden hero-dark">
+        {/* Subtle grid overlay */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{
+          backgroundImage: "linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)",
+          backgroundSize: "60px 60px",
+        }} />
+        {/* Accent glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full opacity-[0.07]"
+          style={{ background: "radial-gradient(circle, #5eead4 0%, transparent 70%)" }} />
+
+        <div className="relative max-w-5xl mx-auto px-4 py-28 sm:py-36 text-center space-y-10">
           <div className="flex justify-center">
             <Image
               src="/logo.jpg"
               alt={dict.hero.logoAlt}
-              width={120}
-              height={120}
-              className="rounded-2xl shadow-lg"
+              width={100}
+              height={100}
+              className="rounded-2xl shadow-2xl ring-1 ring-white/10"
               priority
             />
           </div>
-          <div className="space-y-4">
-            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 tracking-tight">
+          <div className="space-y-5">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight whitespace-pre-line">
               {dict.hero.heading}
             </h1>
-            <p className="text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
-              {dict.hero.description}
+            <p className="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
+              {dict.hero.subheading}
             </p>
           </div>
           <div className="flex justify-center gap-4">
             <a
               href={`/${locale}#products`}
-              className="px-6 py-3 bg-gray-900 text-white rounded-xl font-medium hover:bg-gray-800 transition-colors"
+              className="px-6 py-3 bg-white text-gray-900 rounded-xl font-medium hover:bg-gray-100 transition-colors"
             >
               {dict.hero.ctaProducts}
             </a>
             <a
               href={`/${locale}#about`}
-              className="px-6 py-3 bg-white text-gray-700 border border-gray-300 rounded-xl font-medium hover:bg-gray-50 transition-colors"
+              className="px-6 py-3 bg-transparent text-white border border-white/20 rounded-xl font-medium hover:bg-white/5 transition-colors"
             >
               {dict.hero.ctaAbout}
             </a>
@@ -87,9 +98,44 @@ export default async function Home({
         </div>
       </section>
 
+      {/* Philosophy — Dark section */}
+      <section className="relative overflow-hidden philosophy-dark">
+        {/* Accent line */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-20 bg-gradient-to-b from-teal-400/40 to-transparent" />
+
+        <div className="relative max-w-4xl mx-auto px-4 py-24 sm:py-32 space-y-16">
+          <div className="text-center space-y-2">
+            <p className="text-teal-400 text-sm font-medium tracking-[0.2em] uppercase">
+              {dict.philosophy.heading}
+            </p>
+          </div>
+
+          <blockquote className="text-xl sm:text-2xl lg:text-3xl text-gray-200 leading-relaxed sm:leading-relaxed text-center font-light">
+            {dict.philosophy.statement}
+          </blockquote>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {dict.philosophy.pillars.map((pillar, i) => (
+              <div
+                key={pillar.title}
+                className="group text-center space-y-4 p-6 rounded-2xl border border-white/[0.06] bg-white/[0.02] hover:bg-white/[0.04] transition-colors"
+              >
+                <div className="text-3xl">{pillarIcons[i]}</div>
+                <h3 className="text-lg font-semibold text-white">
+                  {pillar.title}
+                </h3>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  {pillar.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Products */}
-      <section id="products" className="py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-4 space-y-12">
+      <section id="products" className="py-24 bg-white">
+        <div className="max-w-5xl mx-auto px-4 space-y-14">
           <div className="text-center space-y-3">
             <h2 className="text-3xl font-bold text-gray-900">
               {dict.products.heading}
@@ -149,8 +195,8 @@ export default async function Home({
       </section>
 
       {/* About */}
-      <section id="about" className="py-20">
-        <div className="max-w-3xl mx-auto px-4 space-y-12">
+      <section id="about" className="py-24">
+        <div className="max-w-3xl mx-auto px-4 space-y-14">
           <div className="text-center space-y-3">
             <h2 className="text-3xl font-bold text-gray-900">
               {dict.about.heading}
@@ -171,7 +217,7 @@ export default async function Home({
             </tbody>
           </table>
 
-          <div className="bg-white rounded-2xl border border-gray-200 p-8 space-y-4">
+          <div className="mission-card rounded-2xl border border-gray-200 p-8 space-y-4">
             <h3 className="text-lg font-semibold text-gray-900">
               {dict.about.mission.heading}
             </h3>

@@ -16,12 +16,36 @@ const en: Dictionary = {
     en: "English",
   },
   hero: {
-    heading: "Health × AI Technology",
+    heading: "Implementing contributions to healthcare,\nguided by curiosity and trust.",
+    subheading:
+      "Implementing immutable values in a hyperfluid post-AGI world.",
     description:
       "LOHAS Inc. is a technology company developing AI products specialized in healthcare and wellness. We leverage cutting-edge AI to democratize access to medical information and contribute to healthier lives for everyone.",
     ctaProducts: "Products",
     ctaAbout: "About Us",
     logoAlt: "LOHAS Inc.",
+  },
+  philosophy: {
+    heading: "Philosophy",
+    statement:
+      "We believe inequality will neither solidify nor simply shrink. What awaits is a \u201cdynamic equilibrium of disparity\u201d\u2014a hyperfluid world where anyone can rise to the top in an instant, and fall just as fast. That is precisely why immutable values matter.",
+    pillars: [
+      {
+        title: "Dynamic Equilibrium",
+        description:
+          "A hyperfluid world where anyone can rise to the pinnacle in an instant—and fall just as fast. Not fixation, not convergence, but balance within ceaseless flux.",
+      },
+      {
+        title: "Curiosity",
+        description:
+          "The driving force that keeps reaching into the unknown. Not comparison or hierarchy, but pure inquiry that creates new value.",
+      },
+      {
+        title: "Trust",
+        description:
+          "The only unshakable foundation in a fluid world. Not who is above or below, but building relationships where we walk together.",
+      },
+    ],
   },
   products: {
     heading: "Products",
@@ -79,7 +103,7 @@ const en: Dictionary = {
     ],
     mission: {
       heading: "Mission",
-      text: "\u201cLifestyles of Health and Sustainability\u201d \u2014 We aim to improve the accessibility of medical information through AI technology, breaking through barriers of language and expertise so that everyone can access accurate health information.",
+      text: "Enough with comparisons\u2014who\u2019s above, who\u2019s below. That\u2019s not the point. LOHAS Inc. uses curiosity and trust as its compass, implementing contributions to healthcare every single day. Through AI technology, we break through barriers of language and expertise so that everyone can access accurate health information.",
     },
   },
   legal: {
